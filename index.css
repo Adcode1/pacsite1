@@ -28,12 +28,12 @@
     border-radius: 20px;
     overflow: hidden;
     height: 300px; /* Set a fixed height for the cards */
-    width: 100%; /* Set a fixed width for the cards */
+    width: 250px; /* Set a fixed width for the cards */
 }
 
 .card-img-top {
-    object-fit: cover; /* Maintain aspect ratio for the images */
-    height: 60%; /* Adjust as needed */
+    height: 100%;
+    width: 100%;
 }
 
 .container-fluid {
