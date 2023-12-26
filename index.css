@@ -1,0 +1,90 @@
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            height: 100%;
+            background: url(./moonlandingspaceshipimageswhilelandingupscaled-1-1@2x.png), lightgray 50% / cover no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Fixed background */
+            position: relative;   
+        }
+
+        .container-fluid {
+            padding: 0;
+            /* padding-top: 20%; */
+            /* padding-left: 20%; */
+            align-items: center;
+            display: flexbox;
+            justify-content: center;
+            /* align-items: center; */
+            height: 70%;
+            width: 70%;
+            min-height: 100vh;
+        }
+
+    .card {
+    background-color: transparent;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 300px; /* Set a fixed height for the cards */
+    width: 100%; /* Set a fixed width for the cards */
+}
+
+.card-img-top {
+    object-fit: cover; /* Maintain aspect ratio for the images */
+    height: 60%; /* Adjust as needed */
+}
+
+.container-fluid {
+    padding: 0;
+    padding-top: 8%;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    display: flexbox;
+    justify-content: center;
+    height: 70%;
+    min-height: 100vh;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-md-6 {
+    margin-bottom: 20px; /* Adjust as needed for spacing between cards */
+}
+
+/* Additional styles for consistent appearance */
+.card-body {
+    background-color: rgba(0, 0, 0, 0.7);
+
+    border-radius: 0 0 20px 20px;
+    color: white;
+}
+.card img{
+    height: 250px;
+}
+.btn {
+    color: white;
+    background-color: #343a40; /* Bootstrap dark button color */
+}
+
+/* Style for arrow icons */
+.arrow-icon {
+    font-size: 2em;
+}
+.word p {
+    padding-top: 10%;
+    padding-left: 30%;
+    padding-bottom: 0%;   
+    color: #000;
+    font-family: Just Another Hand;
+    font-size: 330%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0%; /* 0px */
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Bootstrap Card Enlarger</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="word">
+        <p>
+            Past Events
+        </p>
+    </div>
+
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <img src="./Imageworkshop.jpeg" class="card-img-top" alt="Image">
+                <div class="card-body">
+                    <p>Image Processing Workshop</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <img src="./chandrayan.jpeg" class="card-img-top" alt="Image">
+                <div class="card-body">
+                    <p>Chandrayan-3 Launch</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+              <img src="./Treasure hunt.jpeg" class="card-img-top" alt="Image">
+              <div class="card-body">
+                  <p>Treasure Hunt </p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+            <img src="./booktalk.jpeg" class="card-img-top" alt="Image">
+            <div class="card-body">
+                <p>Cosmology book talk</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col text-center d-flex justify-content-center">
+            <button class="btn btn-dark mr-2" onclick="toggleCards('left')"><i class="arrow-icon fas fa-arrow-left"></i></button>
+            <button class="btn btn-dark" onclick="toggleCards('right')"><i class="arrow-icon fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    let currentIndex = 0;
+
+    function displayFirstCards() {
+        // Get all the cards
+        var cards = document.querySelectorAll('.col-md-6 .card');
+
+        // Hide all cards except the first two
+        for (var i = 2; i < cards.length; i++) {
+            cards[i].style.display = 'none';
+        }
+
+        // Show the first two cards
+        cards[0].style.display ='block' ;
+        cards[1].style.display ='block';
+    }
+
+    // Call the function when the page is loaded or reloaded
+    window.onload = displayFirstCards;
+
+    function toggleCards(direction) {
+        const cards = document.querySelectorAll('.col-md-6 .card');
+        const numCards = cards.length;
+
+        // Hide all cards
+        cards.forEach(card => {
+            card.style.display = 'none';
+        });
+
+        // Update the currentIndex based on the direction
+        if (direction === 'right') {
+            currentIndex = (currentIndex + 2) % numCards;
+        } else if (direction === 'left') {
+            currentIndex = (currentIndex - 2 + numCards) % numCards;
+        }
+
+        // Show the next two cards
+        cards[currentIndex].style.display = 'block';
+        cards[(currentIndex + 1) % numCards].style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
+
